@@ -1,0 +1,31 @@
+
+<zk xmlns="http://www.zkoss.org/2005/zul">
+    <window id="consuprofe" title="Eliminar Cursos" border="normal" height="425px" width="821px"
+            apply="com.cursos.vista.login.consuDECurso"
+            position="center,center" closable="true"
+            action="show: slideDown;hide: slideUp">
+        <div align="center">         
+            Cedula Alumno 
+            <textbox id="filtro" maxlength="50" />
+            <button id="buscar" label=" Buscar"/>
+        </div> 
+        <div align="center" width="821px" height="315px">   
+        <groupbox width="820px" height="310px" >	
+            <listbox id="tabla"  rows="7">
+                <listhead id="cabecera">
+                  
+                    <listheader label="Curso" align="center"  />
+                    <listheader label="Fecha inicio" align="center" width="120px" />  
+                    <listheader label="Fecha fin" align="center" width="120px" />   
+                    <listheader label="Id Alumno" align="center" width="110px" />  
+                    <listheader label="Horario" align="center"  />   
+                </listhead>        
+            </listbox>
+             
+        </groupbox>
+         </div> 
+        <div align="center">  
+         <button id="closeBtn" width="90px" hflex="1" label="Cerrar"  />
+        </div>
+    </window>
+</zk>

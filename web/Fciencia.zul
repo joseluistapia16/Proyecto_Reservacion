@@ -1,0 +1,29 @@
+
+<zk xmlns="http://www.zkoss.org/2005/zul">
+    <window id="ciencia1"  title="Ciencias" border="normal" height="141px" width="320px"
+            apply="com.cursos.vista.login.FNciencia"
+            position="center,center" closable="false"
+            action="show: slideDown;hide: slideUp">
+        <div align="center" > 
+        <label  value="Nombre de Ciencia "  style="
+        font-size: 17.50px; font-style: Calibri;  80px;" />     
+        
+        </div>
+        
+        <grid   >
+            
+            <rows>
+                <row  align="center">
+                    
+                    <textbox  width="215px"  height="30px" id="nuevaciencia" style="color: #FFFF66;background-color: #002E8A;
+                            font-size: 17.50px; font-style: normal; margin-left: 30px;"  />                                       
+                </row>           
+            </rows>
+        </grid> 
+      
+        <div> 
+        <button id="grabar" width="90px" hflex="1" label="Grabar"/> 
+        <button id="closeBtn" width="90px" hflex="1" label="Cerrar"/> 
+        </div>
+    </window>
+</zk>

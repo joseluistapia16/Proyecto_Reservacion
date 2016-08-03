@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+index.zul
+
+{{IS_NOTE
+	Purpose:
+		
+	Description:
+		
+	History:
+		Mon Jun 12 21:23:35     2006, Created by tomyeh
+		Fri May 01 04:36:35     2009, Modified by stera
+}}IS_NOTE
+
+Copyright (C) 2006 Potix Corporation. All Rights Reserved.
+
+{{IS_RIGHT
+}}IS_RIGHT
+-->
+<window id="modalDialog" title=" "   border="normal" width="880px"
+        height="510px" class="z-windows"
+        position="center,center" closable="true"
+        action="show: slideDown;hide: slideUp"
+        apply="org.zkoss.bind.BindComposer"
+        viewModel="@id('vm') @init('demo.grid.data_filter.FilterViewModel')"
+> 
+    <?link href="style.css" rel="stylesheet" ?>
+  
+    <div align="center" class="z-fondo"> 
+        <space />
+
+        <div class="z-fondo" >
+            <label  value="Cedula:" style=" font-style: initial;
+                   font-size: large;
+                   color: red; " />
+            <image src="/funnel.png" /> 
+            <textbox instant="true" width="100px" 
+                     value="@bind(vm.foodFilter.cedula)" onChange="@command('changeFilter')" 
+                     style=" font-size: medium; color:red"            />
+        </div> 
+        <space/>
+        <div  >
+        <listbox id="tabla"  model="@load(vm.foodModel)" height="354px" rows="10" >   
+            <listhead class="z-cabecera-listbox" >   
+                <listheader label="Cedula" width="100px" align="center" />
+                <listheader label="Nombre" width="180px" align="center" />
+                <listheader label="Apellidos" width="180px" align="center" /> 
+                <listheader label="Sangre" width="80px" align="center" />
+                <listheader label="Celular" width="100px" align="center" />
+                <listheader label="E-Mail" width="220px" align="center" />     
+            </listhead> 
+            <template name="model"   >
+                <listitem sclass="z-filas-listbox" >
+                    <listcell label="@load(each.cedula)" />
+                    <listcell label="@load(each.nombres)" />
+                    <listcell label="@load(each.apellidos)" />
+                    <listcell label="@load(each.sangre)" />
+                    <listcell label="@load(each.celular)" />
+                    <listcell label="@load(each.correo)"  />
+                </listitem>
+            </template>
+        </listbox>
+       </div> 
+    
+       <div class="z-fondo"  height="30px">
+           
+           <button label="Presionar"/>
+           
+       </div> 
+    </div> 
+</window>
+

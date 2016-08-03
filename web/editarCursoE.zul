@@ -1,0 +1,99 @@
+
+<zk xmlns="http://www.zkoss.org/2005/zul">
+    <window id="ncurso"  title="Cursos" border="normal" height="521px" width="607px"
+            apply="com.cursos.vista.login.editarNECurso"
+            position="center,center" closable="false"
+            action="show: slideDown;hide: slideUp">
+        <div align="center">
+            <label  value="Estudiante"  style="
+        font-size: 15px; font-style: Calibri;  80px;" />    
+        </div>
+        
+        <div align="center" > 
+            <combobox id="nombreestudiante"  autodrop="true" buttonVisible="true" width="470px"/>
+            
+          
+        </div>
+        <div>
+            <space/>
+            <grid>
+           
+                <rows>
+                    <row>
+                        <label value="Ciencia" width="180px" style="
+        font-size: 15px; font-style: Calibri;  80px;" />
+                        <hlayout>
+                           <textbox id="ciencia" value="" width="280px" tabindex="1"  />
+                        </hlayout>
+                    
+                    </row>
+                    <row>
+                        <label value="Nombre del curso" width="180px" style="
+        font-size: 15px; font-style: Calibri;  80px;" />
+                        <hlayout>
+                            <combobox id="nombrecurso" autodrop="true" buttonVisible="true" width="280px"/>
+                        </hlayout>
+                    
+                    </row>
+                    <row>
+                        <label value="Profesor" width="180px" style="
+                    font-size: 15px; font-style: Calibri;  80px;" />
+                        
+                        <textbox id="nombreprofesor" value=" " width="280px" tabindex="1" />  
+                     
+                    </row>
+                    <row>
+                        <label value="Materia" style="   font-size: 15px; font-style: Calibri;  80px;" />
+                        <cell>
+                             <textbox id="materia" value="" width="280px" tabindex="1" />
+                                              
+                        </cell>
+                    
+                    </row>
+                
+                
+                
+                    <row>
+                        <label value="Fecha de inicio:" style="   font-size: 15px; font-style: Calibri;  80px;" />
+                      
+                        <hbox align="center">
+                            <textbox id="fi" value="" width="280px" tabindex="1"  />                        
+                        </hbox>
+                     
+                    </row>
+                    <row>
+                        <label value="Fecha de Finalización:" style="   font-size: 15px; font-style: Calibri;  80px;" />
+                        <hbox align="center">
+                             <textbox id="ff" value="" width="280px" tabindex="1"  />                       
+                        </hbox>
+                     
+                    </row>
+                    <row>
+                   
+                        <label value="Valor" width="180px" style="font-size: 15px; font-style: Calibri;  80px;" />
+                        <hlayout>                   
+                            <doublebox id="valor" value="0" width="280px" tabindex="1" />
+                        </hlayout>
+                   
+                    </row>
+                    <row>
+                   
+                        <label value="Horario" width="180px" style="font-size: 15px; font-style: Calibri;  80px;" />
+                        <hlayout>                   
+                            <textbox id="horario" value="" width="280px" tabindex="1" />
+                        </hlayout>
+                   
+                    </row>
+
+                </rows>
+            </grid>
+            <space/>
+            <div> 
+                <button id="grabar" height="35px"  width="50px" hflex="1" label="Grabar" style="
+        font-size: 17.50px; font-style: Calibri;  80px;" /> 
+                <button id="closeBtn" height="35px" width="50px" hflex="1" label="Cerrar" style="
+        font-size: 17.50px; font-style: Calibri;  80px;" /> 
+            </div>
+        </div>
+    </window>
+</zk>

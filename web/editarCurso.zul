@@ -1,0 +1,90 @@
+
+<zk xmlns="http://www.zkoss.org/2005/zul">
+    <window id="ncurso1"  title="Cursos" border="normal" height="476px" width="607px"
+            apply="com.cursos.vista.login.EditarCurso"
+            position="center,center" closable="false"
+            action="show: slideDown;hide: slideUp">
+        <div align="center">
+        <label  value="Ciencia"  style="
+        font-size: 15px; font-style: Calibri;  80px;" />    
+        </div>
+        
+        <div align="center" > 
+        <combobox id="ciencia" autodrop="true" buttonVisible="true" width="220px"/>
+         </div>
+        <div>
+             <space/>
+        <grid>
+           
+            <rows>
+                <row>
+                    <label value="Nombre del curso" width="180px" style="
+        font-size: 15px; font-style: Calibri;  80px;" />
+                    <hlayout>
+                        <textbox id="nombrecurso" value=""
+                            width="280px" tabindex="1" />
+                    </hlayout>
+                    
+                </row>
+                <row>
+                    <label value="Profesor" width="180px" style="
+                    font-size: 15px; font-style: Calibri;  80px;" />
+                    <combobox id="nombreprofesor" autodrop="true" buttonVisible="true" width="280px"/>  
+                     
+                </row>
+                 <row>
+                   <label value="Materia" style="   font-size: 15px; font-style: Calibri;  80px;" />
+                    <cell>
+                        <combobox id="materia" autodrop="true" buttonVisible="true" width="280px"/>                    
+                    </cell>
+                    
+                </row>
+                
+                
+                
+                <row>
+                     <label value="Fecha de inicio:" style="   font-size: 15px; font-style: Calibri;  80px;" />
+                    
+                    <hbox align="center">
+                        <datebox id ="fi" value="@bind(fx.birthday)"
+                            format="@load(vm.dateFormat)" width="280px"  tabindex="7"/>                         
+                    </hbox>
+                     
+                </row>
+                <row>
+                    <label value="Fecha de Finalización:" style="   font-size: 15px; font-style: Calibri;  80px;" />
+                    <hbox align="center">
+                        <datebox id ="ff" value="@bind(fx.birthday)"
+                            format="@load(vm.dateFormat)" width="280px"  tabindex="7"/>                         
+                    </hbox>
+                     
+                </row>
+                <row>
+                   
+                    <label value="Valor" width="180px" style="font-size: 15px; font-style: Calibri;  80px;" />
+                    <hlayout>                   
+                        <doublebox id="valor" value="0" width="280px" tabindex="1" />
+                    </hlayout>
+                   
+                </row>
+                <row>
+                   
+                    <label value="Horario" width="180px" style="font-size: 15px; font-style: Calibri;  80px;" />
+                    <hlayout>                   
+                        <textbox id="horario" value="" width="280px" tabindex="1" />
+                    </hlayout>
+                   
+                </row>
+
+            </rows>
+        </grid>
+        <space/>
+        <div> 
+        <button id="grabar" height="35px"  width="50px" hflex="1" label="Grabar" style="
+        font-size: 17.50px; font-style: Calibri;  80px;" /> 
+        <button id="closeBtn" height="35px" width="50px" hflex="1" label="Cerrar" style="
+        font-size: 17.50px; font-style: Calibri;  80px;" /> 
+        </div>
+    </div>
+    </window>
+</zk>
